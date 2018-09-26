@@ -602,6 +602,7 @@ Git()
 	echo " 12.Ansible "
 	echo " 13.Git "
 	echo " 14.Gradle "
+	echo " 15. Uninstall All tools
 	echo "----------------"
 	echo " Enter a Number "
 	echo "----------------"
