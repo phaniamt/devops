@@ -1112,6 +1112,7 @@ Git()
 	MavenUninstall
 	JfrogUninstall
 	echo " Uninstalled All tools Successfully "
+	;;
 	
  *)
  echo " Please Enter a valid Number "
