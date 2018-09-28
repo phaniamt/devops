@@ -181,6 +181,12 @@ TomcatVersion()
 		cd /opt/apache-tomcat-9.0.12
 		java -cp lib/catalina.jar org.apache.catalina.util.ServerInfo
 	}
+	TomcatUninstall()
+	{
+	 cd /opt/
+	sudo rm -rf apache-tomcat-9.0.12
+	sudo rm -rf apache-tomcat-9.0.12.zip
+	}
 TomcatUp()
 	{
 	echo " Tomcat Starting "
