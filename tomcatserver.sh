@@ -29,9 +29,11 @@
 	fi	
 }
 	TomcatUninstall()
+	{
 	 cd /opt/
 	sudo rm -rf apache-tomcat-9.0.12
 	sudo rm -rf apache-tomcat-9.0.12.zip
+	}
 	
 	TomcatOutAccess()
 	{

@@ -181,6 +181,12 @@ TomcatVersion()
 		cd /opt/apache-tomcat-9.0.12
 		java -cp lib/catalina.jar org.apache.catalina.util.ServerInfo
 	}
+	TomcatUninstall()
+	{
+	 cd /opt/
+	sudo rm -rf apache-tomcat-9.0.12
+	sudo rm -rf apache-tomcat-9.0.12.zip
+	}
 TomcatUp()
 	{
 	echo " Tomcat Starting "
@@ -602,7 +608,7 @@ Git()
 	echo " 12.Ansible "
 	echo " 13.Git "
 	echo " 14.Gradle "
-	echo " 15. Uninstall All tools
+	echo " 15. Uninstall All tools "
 	echo "----------------"
 	echo " Enter a Number "
 	echo "----------------"
@@ -1112,7 +1118,7 @@ Git()
 	AntUninstall
 	MavenUninstall
 	JfrogUninstall
-	echo " Uninstalled All tools Successfully "
+	echo " Uninstalled all softwares successfully "
 	;;
 	
  *)

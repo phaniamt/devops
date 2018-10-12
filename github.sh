@@ -1,4 +1,3 @@
-
 if [ -e /opt/devops-tools ]
 then
 cd /opt/devops-tools
