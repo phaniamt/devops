@@ -33,7 +33,7 @@ Java()
 SonarUninstall()
 {
 cd /home/ec2-user
-rm -rf sonarqube-7.2.1.zip
+rm -rf sonarqube-7.4.zip
 cd /opt
 rm -rf 
 rm -rf sonar-scanner-cli-3.2.0.1227-linux.zip
@@ -45,7 +45,7 @@ rm -rf sonar
 }
 SonarService()
 {
-	sudo ln -s /home/ec2-user/sonarqube-7.2.1/bin/linux-x86-64/sonar.sh /usr/bin/sonar
+	sudo ln -s /home/ec2-user/sonarqube-7.4/bin/linux-x86-64/sonar.sh /usr/bin/sonar
 	echo " #! /bin/sh " >> /etc/init.d/sonar
 	text='/usr/bin/sonar $*'
 	echo "$text" >> /etc/init.d/sonar
@@ -80,7 +80,7 @@ Sonarscanner()
 	}
 Sonarqube()
 	{
-		if [ -e /home/ec2-user/sonarqube-7.2.1 ]
+		if [ -e /home/ec2-user/sonarqube-7.4 ]
 		then 
 		echo
 		echo "================================"
@@ -93,9 +93,9 @@ Sonarqube()
 		Java
 		cd /home/ec2-user
 		echo "Sonarqube Downloading"
-            wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-7.2.1.zip
-            unzip sonarqube-7.2.1.zip
-			sudo chmod -R 777 sonarqube-7.2.1
+            wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-7.4.zip
+            unzip sonarqube-7.4.zip
+			sudo chmod -R 777 sonarqube-7.4
 			SonarService
 		fi
 	}
@@ -114,7 +114,7 @@ Sonarqube()
 		Sonarqube
 		;;
 	2)
-		cd /home/ec2-user/sonarqube-7.2.1
+		cd /home/ec2-user/sonarqube-7.4
 		sudo rm -rf temp 
 		 service sonar start
 		;;
