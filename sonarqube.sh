@@ -65,7 +65,7 @@ Sonarscanner()
 		Java
 		cd /opt
 		echo "SONAR-SCANNER Downloading"
-            sudo wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip 
+            sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.4.zip 
             sudo unzip sonar-scanner-cli-3.2.0.1227-linux.zip
 	    	echo "export SONAR_SCANNER=/opt/sonar-scanner-3.2.0.1227-linux" >> /etc/bashrc
 	    	text='export PATH=$PATH:$SONAR_SCANNER/bin'
