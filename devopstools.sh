@@ -312,7 +312,7 @@ Sonarqube()
 		Java
 		cd /opt
 		echo "Sonarqube Downloading"
-            wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-7.4.zip
+            wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.4.zip
             unzip sonarqube-7.4.zip
 		fi
 	}
