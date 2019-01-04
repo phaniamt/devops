@@ -57,26 +57,26 @@
 	}
 TomcatVersion()
 	{
-		cd /opt/apache-tomcat-9.0.12
+		cd /opt/apache-tomcat-9.0.14
 		java -cp lib/catalina.jar org.apache.catalina.util.ServerInfo
 	}
 TomcatUp()
 	{
 	echo " Tomcat Starting "
-	sh /opt/apache-tomcat-9.0.12/bin/startup.sh
+	sh /opt/apache-tomcat-9.0.14/bin/startup.sh
 	}
 TomcatDown()
 	{
 	 echo " Tomcat Stopping "
-	sh /opt/apache-tomcat-9.0.12/bin/shutdown.sh
+	sh /opt/apache-tomcat-9.0.14/bin/shutdown.sh
 	}
 TomcatPort()
 	{
-		cat -n /opt/apache-tomcat-9.0.12/conf/server.xml | sed '69!d'
+		cat -n /opt/apache-tomcat-9.0.14/conf/server.xml | sed '69!d'
 	}
 Tomcat()
 	{	
-		if [ -e /opt/apache-tomcat-9.0.12 ]
+		if [ -e /opt/apache-tomcat-9.0.14 ]
 			then
 			echo
 			echo "=========================="
