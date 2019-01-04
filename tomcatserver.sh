@@ -31,13 +31,13 @@
 	TomcatUninstall()
 	{
 	 cd /opt/
-	sudo rm -rf apache-tomcat-9.0.12
-	sudo rm -rf apache-tomcat-9.0.12.zip
+	sudo rm -rf apache-tomcat-9.0.14
+	sudo rm -rf apache-tomcat-9.0.14.zip
 	}
 
 	TomcatOutAccess()
 	{
-		cd /opt/apache-tomcat-9.0.12/webapps/host-manager/META-INF
+		cd /opt/apache-tomcat-9.0.14/webapps/host-manager/META-INF
 		sed -i "19i <!-- " context.xml
 		sed -i "22i --> " context.xml
 		cd /opt/apache-tomcat-9.0.12/webapps/manager/META-INF
@@ -46,7 +46,7 @@
 	}
 		AddTomcatUser()
 	{
-		cd /opt/apache-tomcat-9.0.12/conf
+		cd /opt/apache-tomcat-9.0.14/conf
 		echo "enter the user name"
 		read user
 		echo "enter the password"
@@ -57,26 +57,26 @@
 	}
 TomcatVersion()
 	{
-		cd /opt/apache-tomcat-9.0.12
+		cd /opt/apache-tomcat-9.0.14
 		java -cp lib/catalina.jar org.apache.catalina.util.ServerInfo
 	}
 TomcatUp()
 	{
 	echo " Tomcat Starting "
-	sh /opt/apache-tomcat-9.0.12/bin/startup.sh
+	sh /opt/apache-tomcat-9.0.14/bin/startup.sh
 	}
 TomcatDown()
 	{
 	 echo " Tomcat Stopping "
-	sh /opt/apache-tomcat-9.0.12/bin/shutdown.sh
+	sh /opt/apache-tomcat-9.0.14/bin/shutdown.sh
 	}
 TomcatPort()
 	{
-		cat -n /opt/apache-tomcat-9.0.12/conf/server.xml | sed '69!d'
+		cat -n /opt/apache-tomcat-9.0.14/conf/server.xml | sed '69!d'
 	}
 Tomcat()
 	{	
-		if [ -e /opt/apache-tomcat-9.0.12 ]
+		if [ -e /opt/apache-tomcat-9.0.14 ]
 			then
 			echo
 			echo "=========================="
@@ -88,9 +88,9 @@ Tomcat()
 		Java
 		cd /opt
 		echo "Tomcat Downloading"
-            wget http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.12/bin/apache-tomcat-9.0.12.zip
-            unzip apache-tomcat-9.0.12.zip
-			chmod -R 777 apache-tomcat-9.0.12
+            wget http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.zip
+            unzip apache-tomcat-9.0.14.zip
+			chmod -R 777 apache-tomcat-9.0.14
 			TomcatOutAccess
 		fi
 	}
